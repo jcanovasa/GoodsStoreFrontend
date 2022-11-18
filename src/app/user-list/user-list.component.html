@@ -1,0 +1,21 @@
+<h2>Users List</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Birth date</th>
+            <!--<th>Password</th>-->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.surname}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.birth}}</td>
+            <!--<td>{{user.pwd}}</td>-->
+        </tr>
+    </tbody>
+</table>    
