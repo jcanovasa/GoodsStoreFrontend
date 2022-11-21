@@ -10,6 +10,7 @@ import { UserService } from '../user.service';
 export class UserListComponent implements OnInit {
 
   users:User[];
+  user: User = new User();
   
   constructor(private userService:UserService) { }
 

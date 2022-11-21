@@ -10,6 +10,7 @@ export class UserService {
 
   //URL del listado de todos los usuarios del backend
   private baseURL = "http://localhost:8080/api/users/users";
+  users: Observable<User[]>;
 
   constructor(private httpClient : HttpClient) { }
 
@@ -17,4 +18,9 @@ export class UserService {
   getUserList():Observable<User[]> {
     return this.httpClient.get<User[]>(`${this.baseURL}`)
   }
+
+  //addUser(): ... {
+
+  //}
+  
 }
