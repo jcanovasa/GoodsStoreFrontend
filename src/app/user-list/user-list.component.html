@@ -4,7 +4,7 @@
             <h2>Users List</h2>
         </div>
         <div class="col-2">
-            <a th:href="@{/new}" button type="submit"  class="btn btn-outline-dark">Add new user</a>
+            <button th:href="@{/new}" class="btn btn-outline-dark" type="submit">Add new user</button>
         </div>
     </div>
 </div>
@@ -28,9 +28,9 @@
             <td class="text-center">{{user.email}}</td>
             <td class="text-center">{{user.birth}}</td>
             <td class="text-center">
-                <button type="button" class="btn btn-primary mr-1">Edit</button>
-                <button type="button" class="btn btn-success mx-1">Update</button>
-                <button type="button" class="btn btn-danger mx-1">Delete</button>
+                <a type="button" class="btn btn-primary mr-1">Edit</a>
+                <a type="button" class="btn btn-success mx-1">Update</a>
+                <a type="button" class="btn btn-danger mx-1">Delete</a>
             </td>
         </tr>
     </tbody>
