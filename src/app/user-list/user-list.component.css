@@ -2,12 +2,12 @@ button {
     background: black;
     cursor: pointer;
     border: none;
-    padding: 10px 18px;
+    padding: 8px 12px;
     color: #FFF;
     font-size: 16px;
     font-weight: bold;
     position: relative;
-    border-radius: 12px;
+    border-radius: 7px;
 }
 
 button::before{
@@ -37,4 +37,16 @@ button::before{
     100% {
         background-position: 0 0;
     }
+}
+
+table.table.table-striped {
+    border-radius: 70%;
+}
+
+category-table {
+    border-radius: 7px;
+}
+
+i.fas.fa-user-plus {
+    font-size: 2rem;
 }

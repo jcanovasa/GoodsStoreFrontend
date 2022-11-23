@@ -16,11 +16,12 @@ export class UserService {
 
   //Con este método obtengo los usuarios
   getUserList():Observable<User[]> {
-    return this.httpClient.get<User[]>(`${this.baseURL}`)
+    return this.httpClient.get<User[]>(`${this.baseURL}`);
   }
 
-  //addUser(): ... {
-
-  //}
+  //Con este método registro nuevos usuarios
+  addUser(user:User) : Observable<Object> { 
+    return this.httpClient.post(`${this.baseURL}`,user);
+  }
   
 }
