@@ -24,4 +24,14 @@ export class UserService {
     return this.httpClient.post(`${this.baseURL}`,user);
   }
   
+  //Con este método elimino usuarios
+  deleteUser(id:number): Observable<Object> {
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
+  }
+
+  /** 
+  updateUser(id:number): Observable<Object> {
+    return this.httpClient.put(`${this.baseURL}`,);
+  }
+  */
 }
