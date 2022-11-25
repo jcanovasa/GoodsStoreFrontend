@@ -17,7 +17,7 @@ export class RegisterProductComponent {
 
   }
 
-  saveUser() {
+  saveProduct() {
     this.productService.addProduct(this.product).subscribe(data => {
       console.log(data);
       this.goToProductList();
@@ -29,7 +29,7 @@ export class RegisterProductComponent {
   }
 
   onSubmit() {
-    this.saveUser();
+    this.saveProduct();
   }
 
 }

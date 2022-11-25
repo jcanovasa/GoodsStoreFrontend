@@ -29,9 +29,13 @@ export class UserService {
     return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
 
-  /** 
-  updateUser(id:number): Observable<Object> {
-    return this.httpClient.put(`${this.baseURL}`,);
+  getUserById(id:number):Observable<User>{
+    return this.httpClient.get<User>(`${this.baseURL}/${id}`);
   }
-  */
+
+  updateUser(id:number,user:User): Observable<Object> {
+    return this.httpClient.put(`${this.baseURL}`,user);
+  }
+
+
 }

@@ -20,11 +20,19 @@ export class ProductService {
    }
  
    //Con este método registro nuevos usuarios
-   addProduct(user:Product) : Observable<Object> { 
-     return this.httpClient.post(`${this.baseURL}`,user);
+   addProduct(product:Product) : Observable<Object> { 
+     return this.httpClient.post(`${this.baseURL}`,product);
    }
    
    deleteProduct(id:number): Observable<Object> {
      return this.httpClient.delete(`${this.baseURL}/${id}`);
+   }
+
+   getProductById(id:number):Observable<Product>{
+    return this.httpClient.get<Product>(`${this.baseURL}/${id}`);
+   }
+
+   updateProduct(id:number): Observable<Object>{
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
    }
 }
