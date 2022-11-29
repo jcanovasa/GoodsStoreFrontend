@@ -9,7 +9,7 @@ import { User } from './user';
 export class UserService {
 
   //URL del listado de todos los usuarios del backend
-  private baseURL = "http://localhost:8080/api/users/users";
+  private baseURL = "http://localhost:8080/api/users";
   users: Observable<User[]>;
 
   constructor(private httpClient : HttpClient) { }

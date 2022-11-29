@@ -14,6 +14,9 @@ import { RegisterProductComponent } from './register-product/register-product.co
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CategoryListComponent } from './category-list/category-list.component';
+import { CountrySelectorComponent } from './country-selector/country-selector.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { CategoryListComponent } from './category-list/category-list.component';
     RegisterProductComponent,
     UpdateProductComponent,
     ProductDetailsComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    CountrySelectorComponent
   ],
   imports: [
     BrowserModule,

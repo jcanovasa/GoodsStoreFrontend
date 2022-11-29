@@ -1,28 +1,84 @@
-<h3>Details of the user {{user.name}} {{user.surname}} with id {{user.id}} </h3>
 <div class="container">
     <div class="row">
         <div class="col">
-            <label><b>ID: </b> {{user.id}} </label>
+            <h3 id="title"> Details of the user <span id="names"> {{user.name}} {{user.surname}} </span> with id <span
+                    id="names"> {{user.id}} </span> </h3>
         </div>
     </div>
+</div><br>
+
+<div class="container">
     <div class="row">
-        <div class="col">
-            <label><b>Name: </b> {{user.name}} </label>
+        <div class="col" style="width: auto">
+            <div class="card" style="width: auto">
+                <div class="card-header">
+                    <h5 class="card-title" id="card-titles">Contact information</h5><br>
+                    <div class="row">
+                        <div class="col">
+                            <label><b>ID: </b> {{user.id}} </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label><b>Name: </b> {{user.name}} </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label><b>Surname: </b> {{user.surname}} </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label><b>Email: </b> {{user.email}} </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label><b>Birth date: </b> {{user.birth | date:"yyyy/MM/dd"}} </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <label><b>Surname: </b> {{user.surname}} </label>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <label><b>Email: </b> {{user.email}} </label>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <label><b>Birth date: </b> {{user.birth | date:"yyyy/MM/dd"}} </label>
-        </div>
+        <div class="col" style="width: auto">
+            <div class="card" style="width: auto">
+                <div class="card-header">
+                    <h5 class="card-title" id="card-titles">Address information</h5><br>
+                    <div class="row">
+                        <div class="col">
+                            <label><b>City: </b> </label>
+                        </div>
+                        <div class="col">
+                            <label><b>Country: </b> </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label><b>PC: </b> </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label><b>Street: </b> </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label><b>Nº: </b> </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label><b>Door (optional): </b> </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+</div> <br>
+<div class="row">
+    <div class="col">
+        <a (click)="updateUser(user.id)" type="button" class="btn btn-success mx-1 text-white">Update</a>
     </div>
 </div>
