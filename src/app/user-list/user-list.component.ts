@@ -38,4 +38,5 @@ export class UserListComponent implements OnInit {
   detailsUser(id: number) {
     this.router.navigate(['user-details', id]);
   }
+
 }

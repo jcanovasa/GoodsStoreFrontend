@@ -17,6 +17,7 @@ import { CategoryListComponent } from './category-list/category-list.component';
 import { CountrySelectorComponent } from './country-selector/country-selector.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { LogginViewComponent } from './loggin-view/loggin-view.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     UpdateProductComponent,
     ProductDetailsComponent,
     CategoryListComponent,
-    CountrySelectorComponent
+    CountrySelectorComponent,
+    LogginViewComponent
   ],
   imports: [
     BrowserModule,

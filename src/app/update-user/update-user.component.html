@@ -1,1 +1,61 @@
-<h3>Updating user <span id="names"> {{user.name}} {{user.surname}} </span> with id <span> {{user.id}} </span></h3>
+<h3>Updating user <span id="names"> {{user.name}} {{user.surname}} </span> with id <span id="names"> {{user.id}} </span></h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <br>
+            <form (ngSubmit)="onSubmit()" #userForm = "ngForm">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <label>Name</label>
+                            <input type="text" 
+                            class="form-control" 
+                            id="name" 
+                            [(ngModel)]="user.name" 
+                            name="name" 
+                            required 
+                            placeholder="Your name"
+                            minlength="2"
+                            maxlength="15"
+                            #name = "ngModel">
+                            <label>Surame</label>
+                            <input type="text" 
+                            class="form-control" 
+                            id="surname" 
+                            [(ngModel)]="user.surname" 
+                            name="surname" 
+                            required 
+                            placeholder="Your surname">
+                            <label>Email</label>
+                            <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email" required placeholder="Your email">
+                            <label>Date birth</label>
+                            <input type="date" 
+                            class="form-control" 
+                            id="birth" 
+                            [(ngModel)]="user.birth" 
+                            name="birth" 
+                            required 
+                            placeholder={{user.birth}}><br>
+                            <label>Rol</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" [(ngModel)]="user.rol" name="rol" value="User" checked>
+                                <label class="form-check-label" for="userRol">User</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" [(ngModel)]="user.rol" name="rol" value="Admin">
+                                <label class="form-check-label" for="adminRol">Administrator</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-success" >Save</button> <!-- [disabled]="!userForm.form.valid"-->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

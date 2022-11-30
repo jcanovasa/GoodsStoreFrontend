@@ -7,10 +7,10 @@ export class Product {
     price:number;
     brand:string;
     color:string;
-    weight:number;
-    volume:number;
+    weight:string;
+    volume:string;
     stock:number;
-    category:Category;
-    imgURL:String;
+    category:Category = new Category();
+    imgURL:string;
 }
 

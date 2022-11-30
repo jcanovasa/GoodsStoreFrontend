@@ -21,6 +21,7 @@ export class ProductService {
  
    //Con este método registro nuevos usuarios
    addProduct(product:Product) : Observable<Object> { 
+      console.log(product);
      return this.httpClient.post(`${this.baseURL}`,product);
    }
    

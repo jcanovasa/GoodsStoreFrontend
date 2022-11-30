@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges } from '@angular/core';
 import { Router } from '@angular/router';
+import { Category } from '../category';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
 
@@ -8,18 +9,20 @@ import { ProductService } from '../product.service';
   templateUrl: './register-product.component.html',
   styleUrls: ['./register-product.component.css']
 })
-export class RegisterProductComponent {
+export class RegisterProductComponent implements OnChanges {
 
   product: Product = new Product();
   constructor(private productService: ProductService, private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  }
 
+  ngOnChanges(): void {
+    console.log(this.product);
+    
   }
 
   saveProduct() {
     this.productService.addProduct(this.product).subscribe(data => {
-      console.log(data);
       this.goToProductList();
     }, error => console.log(error));
   }

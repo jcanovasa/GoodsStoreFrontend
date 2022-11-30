@@ -6,5 +6,6 @@ export class User {
     email:string;
     pwd:string;
     birth:string;
+    rol:string;
     
 }

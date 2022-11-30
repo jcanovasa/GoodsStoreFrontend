@@ -19,7 +19,6 @@ export class RegisterUserComponent {
 
   saveUser() {
     this.userService.addUser(this.user).subscribe(data => {
-      console.log(data);
       this.goToUserList();
     }, error => console.log(error));
   }
