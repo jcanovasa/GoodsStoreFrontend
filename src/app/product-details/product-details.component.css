@@ -1,3 +1,11 @@
 #buttonCustom {
     background-color: rgb(255, 209, 3);
+    border-color: rgb(196, 137, 0);
 }
+
+#product {
+    border-width: 1px;
+    border-color: rgb(179, 179, 179);
+    background-color: rgb(243, 243, 243);
+}
+

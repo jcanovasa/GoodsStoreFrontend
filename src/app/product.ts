@@ -12,5 +12,6 @@ export class Product {
     stock:number;
     category:Category = new Category();
     imgURL:string;
+    description:String;
 }
 

@@ -16,9 +16,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CategoryListComponent } from './category-list/category-list.component';
 import { CountrySelectorComponent } from './country-selector/country-selector.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
 import { LogginViewComponent } from './loggin-view/loggin-view.component';
 import { CartComponent } from './cart/cart.component';
+
 
 @NgModule({
   declarations: [
