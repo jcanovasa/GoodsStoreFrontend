@@ -18,6 +18,7 @@ import { CountrySelectorComponent } from './country-selector/country-selector.co
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { LogginViewComponent } from './loggin-view/loggin-view.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LogginViewComponent } from './loggin-view/loggin-view.component';
     ProductDetailsComponent,
     CategoryListComponent,
     CountrySelectorComponent,
-    LogginViewComponent
+    LogginViewComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
