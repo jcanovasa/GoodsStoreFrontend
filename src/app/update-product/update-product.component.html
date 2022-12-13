@@ -1,1 +1,126 @@
-<p>update-product works!</p>
+<!--
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h3 class="text-center">Add product</h3>
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <label>Name</label>
+                            <input type="text" class="form-control" id="name" [(ngModel)]="product.nameItem"
+                                name="name">
+                            <label>Price</label>
+                            <input type="text" class="form-control" id="price" [(ngModel)]="product.price" name="price">
+                            <label>Brand</label>
+                            <input type="email" class="form-control" id="brand" [(ngModel)]="product.brand"
+                                name="brand">
+                            <label>Color</label>
+                            <input type="text" class="form-control" id="color" [(ngModel)]="product.color" name="color">
+                            <label>Weight</label>
+                            <input type="text" class="form-control" id="weight" [(ngModel)]="product.weight"
+                                name="weight">
+                            <label>Volume</label>
+                            <input type="text" class="form-control" id="volume" [(ngModel)]="product.volume"
+                                name="volume">
+                            <label>Category</label>
+                            <input type="text" class="form-control" id="category" [(ngModel)]="product.category.name"
+                                name="category">
+                            <label>Image</label>
+                            <input type="text" class="form-control" id="image" [(ngModel)]="product.imgURL"
+                                name="image">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-success">Save</button>
+                    </div>
+                </div>
+            </form>        </div>
+    </div>
+</div>
+-->
+
+
+
+<form (ngSubmit)="onSubmit()" #userForm = "ngForm">
+    <div class="form-row">
+        <div class="col-md-3 mb-3">
+            <label for="validationServer01">Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="product.nameItem" name="name" #name = "ngModel">
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationServer01">Brand</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="brand" [(ngModel)]="product.brand" name="brand">
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label>Category</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="category" [(ngModel)]="product.category.id"
+                    name="category">
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-3">
+            <label for="exampleFormControlSelect1">Color</label>
+            <select [(ngModel)]="product.color" class="form-control" id="exampleFormControlSelect1" name="exampleFormControlSelect1">
+                <option selected> Choose color... </option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Green">Green</option>
+                <option value="Orange">Orange</option>
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Gray">Gray</option>
+                <option value="Other">Other</option>
+              </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-3 mb-3">
+            <label for="validationServer01">Volume</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="volume" [(ngModel)]="product.volume" name="volume">
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationServer01">Weight</label>
+            <input type="text" class="form-control" id="weight" [(ngModel)]="product.weight" name="weight">
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationServer01">Image URL</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="volume" [(ngModel)]="product.imgURL" name="volume">
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationServer02">Price</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend3">$</span>
+                </div>
+                <input type="text" class="form-control" id="price" [(ngModel)]="product.price" name="price">
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-12 mb-3">
+            <label for="validationServer01">Description</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="volume" [(ngModel)]="product.description" name="volume">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="form-row">
+        <div class="col-md-3 mb-3">
+            <button class="btn btn-success">Add new product</button>
+        </div>
+    </div>
+
+</form>

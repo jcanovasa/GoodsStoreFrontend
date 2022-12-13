@@ -12,9 +12,7 @@ export class ProductDetailsComponent implements OnInit {
 
   id: number;
   product: Product;
-
-  constructor(private route: ActivatedRoute, private productService: ProductService, private router: Router) {
-  }
+  constructor(private route: ActivatedRoute, private productService: ProductService, private router: Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -24,4 +22,15 @@ export class ProductDetailsComponent implements OnInit {
     });
   }
 
+  updateProduct(id: number) {
+    this.router.navigate(['update-product', id]);
+  }
+
+  deleteProduct(id: number) {
+    this.productService.deleteProduct(id).subscribe(data => {
+      window.alert(data["msg"]);
+      this.router.navigate(['products-list']);
+      
+    });
+  }
 }

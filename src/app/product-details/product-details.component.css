@@ -3,9 +3,22 @@
     border-color: rgb(196, 137, 0);
 }
 
+#btn2{
+    
+}
+
 #product {
     border-width: 1px;
     border-color: rgb(179, 179, 179);
     background-color: rgb(243, 243, 243);
 }
 
+#addCart {
+    align-self: flex-end;
+}
+
+#addBtnContainer {
+    height: 92%;
+}
+
+  

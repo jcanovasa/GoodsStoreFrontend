@@ -8,18 +8,18 @@ import { Product } from './product';
 })
 export class ProductService {
 
-   //URL del listado de todos los usuarios del backend
+   //URL del listado de todos los productos del backend
    private baseURL = "http://localhost:8080/api/products/products";
-   users: Observable<Product[]>;
+   products: Observable<Product[]>;
  
    constructor(private httpClient : HttpClient) { }
  
-   //Con este método obtengo los usuarios
+   //Con este método obtengo los productos
    getProductList():Observable<Product[]> {
      return this.httpClient.get<Product[]>(`${this.baseURL}`);
    }
  
-   //Con este método registro nuevos usuarios
+   //Con este método registro nuevos productos
    addProduct(product:Product) : Observable<Object> { 
       console.log(product);
      return this.httpClient.post(`${this.baseURL}`,product);
@@ -33,7 +33,7 @@ export class ProductService {
     return this.httpClient.get<Product>(`${this.baseURL}/${id}`);
    }
 
-   updateProduct(id:number): Observable<Object>{
-    return this.httpClient.delete(`${this.baseURL}/${id}`);
+   updateProduct(id:number,product:Product): Observable<Object>{
+    return this.httpClient.put(`${this.baseURL}/${id}`,product);
    }
 }

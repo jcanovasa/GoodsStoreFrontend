@@ -14,7 +14,6 @@ import { RegisterProductComponent } from './register-product/register-product.co
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CategoryListComponent } from './category-list/category-list.component';
-import { CountrySelectorComponent } from './country-selector/country-selector.component';
 
 import { LogginViewComponent } from './loggin-view/loggin-view.component';
 import { CartComponent } from './cart/cart.component';
@@ -32,7 +31,6 @@ import { CartComponent } from './cart/cart.component';
     UpdateProductComponent,
     ProductDetailsComponent,
     CategoryListComponent,
-    CountrySelectorComponent,
     LogginViewComponent,
     CartComponent
   ],
