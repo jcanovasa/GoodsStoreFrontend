@@ -38,89 +38,106 @@
                         <button class="btn btn-success">Save</button>
                     </div>
                 </div>
-            </form>        </div>
+            </form>
+        </div>
     </div>
 </div>
 -->
 
 
-
-<form (ngSubmit)="onSubmit()" #userForm = "ngForm">
-    <div class="form-row">
-        <div class="col-md-3 mb-3">
-            <label for="validationServer01">Name</label>
-            <input type="text" class="form-control" id="name" [(ngModel)]="product.nameItem" name="name" #name = "ngModel">
-        </div>
-        <div class="col-md-3 mb-3">
-            <label for="validationServer01">Brand</label>
-            <div class="input-group">
-                <input type="text" class="form-control" id="brand" [(ngModel)]="product.brand" name="brand">
-            </div>
-        </div>
-        <div class="col-md-3 mb-3">
-            <label>Category</label>
-            <div class="input-group">
-                <input type="text" class="form-control" id="category" [(ngModel)]="product.category.id"
-                    name="category">
-            </div>
-        </div>
-        
-        <div class="col-md-3 mb-3">
-            <label for="exampleFormControlSelect1">Color</label>
-            <select [(ngModel)]="product.color" class="form-control" id="exampleFormControlSelect1" name="exampleFormControlSelect1">
-                <option selected> Choose color... </option>
-                <option value="Red">Red</option>
-                <option value="Blue">Blue</option>
-                <option value="Yellow">Yellow</option>
-                <option value="Green">Green</option>
-                <option value="Orange">Orange</option>
-                <option value="Black">Black</option>
-                <option value="White">White</option>
-                <option value="Gray">Gray</option>
-                <option value="Other">Other</option>
-              </select>
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="col-md-3 mb-3">
-            <label for="validationServer01">Volume</label>
-            <div class="input-group">
-                <input type="text" class="form-control" id="volume" [(ngModel)]="product.volume" name="volume">
-            </div>
-        </div>
-        <div class="col-md-3 mb-3">
-            <label for="validationServer01">Weight</label>
-            <input type="text" class="form-control" id="weight" [(ngModel)]="product.weight" name="weight">
-        </div>
-        <div class="col-md-3 mb-3">
-            <label for="validationServer01">Image URL</label>
-            <div class="input-group">
-                <input type="text" class="form-control" id="volume" [(ngModel)]="product.imgURL" name="volume">
-            </div>
-        </div>
-        <div class="col-md-3 mb-3">
-            <label for="validationServer02">Price</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroupPrepend3">$</span>
+<div class="container">
+    <div class="col" id="formCentral">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer01">Name</label>
+                    <input type="text" class="form-control" id="name" [(ngModel)]="product.nameItem" name="name">
                 </div>
-                <input type="text" class="form-control" id="price" [(ngModel)]="product.price" name="price">
-            </div>
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="col-md-12 mb-3">
-            <label for="validationServer01">Description</label>
-            <div class="input-group">
-                <input type="text" class="form-control" id="volume" [(ngModel)]="product.description" name="volume">
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="form-row">
-        <div class="col-md-3 mb-3">
-            <button class="btn btn-success">Add new product</button>
-        </div>
-    </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer01">Brand</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="brand" [(ngModel)]="product.brand" name="brand">
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label>Category</label>
+                    <div class="input-group">
+                        <select type="text" class="form-control" id="category" [(ngModel)]="product.category.id"
+                            name="category">
+                            <option selected> Choose category... </option>
+                            <option value="1">Bikes</option>
+                            <option value="2">Frames</option>
+                            <option value="3">Components</option>
+                        </select>
+                    </div>
+                </div>
 
-</form>
+                <div class="col-md-3 mb-3">
+                    <label for="exampleFormControlSelect1">Color</label>
+                    <select [(ngModel)]="product.color" class="form-control" id="exampleFormControlSelect1"
+                        name="exampleFormControlSelect1">
+                        <option selected> Choose color... </option>
+                        <option value="Red">Red</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Green">Green</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Gray">Gray</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer01">Volume</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="volume" [(ngModel)]="product.volume" name="volume">
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer01">Weight</label>
+                    <input type="text" class="form-control" id="weight" [(ngModel)]="product.weight" name="weight">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer01">Image URL</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="volume" [(ngModel)]="product.imgURL" name="volume">
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer02">Price</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend3">$</span>
+                        </div>
+                        <input type="text" class="form-control" id="price" [(ngModel)]="product.price" name="price">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-9 mb-3">
+                    <label for="validationServer01">Description</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="volume" [(ngModel)]="product.description"
+                            name="volume">
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer01">Stock</label>
+                    
+                </div>
+            </div>
+            <br>
+            <div class="form-row">
+                <div class="col-md mb-3">
+                    <button class="btn btn-success">Save changes</button>
+                    <button (click)="goToProductList()" class="btn btn-danger mx-2">Cancel</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    
+</div>

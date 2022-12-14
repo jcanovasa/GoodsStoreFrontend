@@ -1,10 +1,8 @@
 #buttonCustom {
     background-color: rgb(255, 209, 3);
     border-color: rgb(196, 137, 0);
-}
-
-#btn2{
-    
+    width: 69%;
+    text-align: justify;
 }
 
 #product {
@@ -20,5 +18,6 @@
 #addBtnContainer {
     height: 92%;
 }
+
 
   
