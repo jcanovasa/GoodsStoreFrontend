@@ -1,3 +1,5 @@
+<app-navbar></app-navbar>
+
 <h3>Updating user <span id="names"> {{user.name}} {{user.surname}} </span> with id <span id="names"> {{user.id}} </span></h3>
 
 <div class="container">
@@ -12,14 +14,13 @@
                             <input type="text" 
                             class="form-control" 
                             id="name" 
-                            [(ngModel)]="user.name" 
+                            [(ngModel)]="user.name"
                             name="name" 
-                            required 
-                            placeholder="Your name"
+                            required
                             minlength="2"
                             maxlength="15"
                             #name = "ngModel"><br>
-                            <label>Surame</label>
+                            <label>Surname</label>
                             <input type="text" 
                             class="form-control" 
                             id="surname" 
@@ -28,7 +29,13 @@
                             required 
                             placeholder="Your surname"><br>
                             <label>Email</label>
-                            <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email" required placeholder="Your email"><br>
+                            <input type="email" 
+                            class="form-control" 
+                            id="email" 
+                            [(ngModel)]="user.email" 
+                            name="email" 
+                            required 
+                            placeholder="Your email"><br>
                             <label>Date birth</label>
                             <input type="date" 
                             class="form-control" 

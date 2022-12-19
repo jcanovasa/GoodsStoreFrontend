@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class AppComponent {
-  title = 'GoodsStore';
+export class LoginComponent {
   email: string;
   password: string;
   isLoggedIn: boolean = false;
@@ -15,13 +14,11 @@ export class AppComponent {
   login(email,password){
     if(email == 'admin@admin' && password == 'root') {
       this.isLoggedIn = true;
+      window.location.href = 'http://localhost:4200/users';
+
     } else {
       this.errors.push('Email or password incorrect');
     }
     
   }
-  logout() {
-    this.isLoggedIn = false;
-  }
 }
-

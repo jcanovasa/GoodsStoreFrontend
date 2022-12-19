@@ -10,11 +10,13 @@ import { RegisterProductComponent} from './register-product/register-product.com
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { CartComponent } from './cart/cart.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
+  { path: 'login', component: LoginComponent },
   { path: 'users', component: UserListComponent },
-  { path: '', redirectTo: 'users', pathMatch: 'full' }, /** tengo que redirigir esto a una página de inicio */
+  { path: '', redirectTo: 'login', pathMatch: 'full'}, /** tengo que redirigir esto a una página de inicio */
   { path: 'users/register-user', component: RegisterUserComponent },
   { path: 'update-user/:id', component: UpdateUserComponent },
   { path: 'user-details/:id', component: UserDetailsComponent },

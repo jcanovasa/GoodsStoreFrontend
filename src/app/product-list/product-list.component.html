@@ -1,48 +1,5 @@
-<!--
-<div class="container">
-    <div class="row">
-        <div class="col-11">
-            <h2>Product List</h2>
-        </div>
-        <div class="col-1">
-           
-            <a routerLink="/products/register-product" routerLinkActive="active" class="nav-link"><i class="fas fa-plus-square"></i></a>
-        </div>
-    </div>
-</div>
-<br>
-<table class="table table-striped" id="category-table">
-    <thead class="table-dark">
-        <tr>
-            <th class="text-center">Id</th>
-            <th class="text-center">Name</th>
-            <th class="text-center">Brand</th>
-            <th class="text-center">Category</th>
-            <th class="text-center">Color</th>
-            <th class="text-center">Weight</th>
-            <th class="text-center">Volume</th>            
-            <th class="text-center">Price</th>
-            <th class="text-center">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let product of products">
-            <td class="text-center align-baseline">{{product.id}}</td>
-            <td class="text-center">{{product.nameItem}}</td>
-            <td class="text-center">{{product.brand}}</td>
-            <td class="text-center">{{product.category.name}}</td>
-            <td class="text-center">{{product.color}}</td>
-            <td class="text-center">{{product.weight}}</td>
-            <td class="text-center">{{product.volume}}</td>
-            <td class="text-center">${{product.price}}</td>
-            <td class="text-center">
-                <a (click)="deleteProduct(product.id)" type="button" class="btn btn-danger mx-1 text-white">Delete</a>
-                <a (click)="detailsProduct(product.id)" type="button" class="btn btn-primary mx-1 text-white">Details</a>
-                <a (click)="detailsProduct(product.id)" type="button" class="btn btn-success mx-1 text-white">Update</a>
-            </td>
-        </tr>
-    </tbody>
-</table>     -->
+<app-navbar></app-navbar>
+
 <div class="container">
     <div class="row">
         <div class="col-11">

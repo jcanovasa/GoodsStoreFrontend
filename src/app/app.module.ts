@@ -17,6 +17,10 @@ import { CategoryListComponent } from './category-list/category-list.component';
 
 import { LogginViewComponent } from './loggin-view/loggin-view.component';
 import { CartComponent } from './cart/cart.component';
+import { LoginComponent } from './login/login.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -32,7 +36,11 @@ import { CartComponent } from './cart/cart.component';
     ProductDetailsComponent,
     CategoryListComponent,
     LogginViewComponent,
-    CartComponent
+    CartComponent,
+    LoginComponent,
+    NavbarComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

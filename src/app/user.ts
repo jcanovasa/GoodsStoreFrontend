@@ -8,4 +8,5 @@ export class User {
     birth:string;
     rol:string;
     
+    
 }

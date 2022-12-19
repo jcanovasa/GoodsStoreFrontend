@@ -1,5 +1,5 @@
-import { Component, OnChanges } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnChanges, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from '../category';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
@@ -9,17 +9,21 @@ import { ProductService } from '../product.service';
   templateUrl: './update-product.component.html',
   styleUrls: ['./update-product.component.css']
 })
-export class UpdateProductComponent implements OnChanges {
+export class UpdateProductComponent implements OnInit {
 
-  product: Product = new Product();
-  constructor(private productService: ProductService, private router: Router) { }
+  product:Product;
+  id:number;
+  name_item:string;
+  
+  constructor(private productService: ProductService, private route:ActivatedRoute, private router:Router) { }
 
-  ngOnInit(): void {  }
-
-  ngOnChanges(): void {
-    console.log(this.product);
+  ngOnInit(): void { 
+    this.id = this.route.snapshot.params['id'];
+    this.productService.getProductById(this.id).subscribe(data => {
+      this.product = data;
+    });
     
-  }
+   }
 
   saveProduct() {
     this.productService.addProduct(this.product).subscribe(data => {
