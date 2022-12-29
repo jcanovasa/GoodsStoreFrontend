@@ -1,30 +1,25 @@
 <app-navbar></app-navbar>
 
-<h3>Updating product <span id="names"> {{product.nameItem}} </span> with id <span id="names"> {{product.id}} </span></h3>
+
 <div class="container">
-    <div class="col" id="formCentral">
-        <form (ngSubmit)="onSubmit()" #productForm = "ngForm">
+    <h3>Updating product <span id="names"> {{product.nameItem}} </span> with id <span id="names"> {{product.id}} </span>
+    </h3><br>
+    <div class="container card card-header" style="width: 850">
+        <form (ngSubmit)="onSubmit()" #productForm="ngForm">
             <div class="form-row">
                 <div class="col-md-3 mb-3">
-                    <label>Name</label>
-                    <input type="text" 
-                    class="form-control" 
-                    id="nameItem" 
-                    [(ngModel)]="product.nameItem" 
-                    name="nameItem"
-                    required
-                    minlength="2"
-                    maxlength="15"
-                    #name = "ngModel">
+                    <label><b>Name</b></label>
+                    <input type="text" class="form-control" id="nameItem" [(ngModel)]="product.nameItem" name="nameItem"
+                        required minlength="2" maxlength="15" #name="ngModel">
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="validationServer01">Brand</label>
+                    <label for="validationServer01"><b>Brand</b></label>
                     <div class="input-group">
                         <input type="text" class="form-control" id="brand" [(ngModel)]="product.brand" name="brand">
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label>Category</label>
+                    <label><b>Category</b></label>
                     <div class="input-group">
                         <select type="text" class="form-control" id="category" [(ngModel)]="product.category.id"
                             name="category">
@@ -32,12 +27,13 @@
                             <option value="1">Bikes</option>
                             <option value="2">Frames</option>
                             <option value="3">Components</option>
+                            <option value="4">Other</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="col-md-3 mb-3">
-                    <label for="exampleFormControlSelect1">Color</label>
+                    <label for="exampleFormControlSelect1"><b>Color</b></label>
                     <select [(ngModel)]="product.color" class="form-control" id="exampleFormControlSelect1"
                         name="exampleFormControlSelect1">
                         <option selected> Choose color... </option>
@@ -55,23 +51,27 @@
             </div>
             <div class="form-row">
                 <div class="col-md-3 mb-3">
-                    <label for="validationServer01">Volume</label>
+                    <label for="validationServer01"><b>Volume</b></label>
                     <div class="input-group">
                         <input type="text" class="form-control" id="volume" [(ngModel)]="product.volume" name="volume">
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="validationServer01">Weight</label>
-                    <input type="text" class="form-control" id="weight" [(ngModel)]="product.weight" name="weight">
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="validationServer01">Image URL</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="volume" [(ngModel)]="product.imgURL" name="volume">
+                    <label for="validationServer01"><b>Weight</b></label><div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend3">kg</span>
+                        </div>
+                        <input type="text" class="form-control" id="weight" [(ngModel)]="product.weight" name="weight">
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="validationServer02">Price</label>
+                    <label for="validationServer01"><b>Image URL</b></label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="imgURL" [(ngModel)]="product.imgURL" name="imgURL">
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer02"><b>Price</b></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroupPrepend3">$</span>
@@ -82,15 +82,16 @@
             </div>
             <div class="form-row">
                 <div class="col-md-9 mb-3">
-                    <label for="validationServer01">Description</label>
+                    <label for="validationServer01"><b>Description</b></label>
                     <div class="input-group">
                         <input type="text" class="form-control" id="volume" [(ngModel)]="product.description"
                             name="volume">
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="validationServer01">Stock</label>
-                    
+                    <label for="validationServer01"><b>Stock</b></label>
+                    <input class="form-control" type="number" as="input-group" min="1" max="100" value="1" id="stock"
+                        [(ngModel)]="product.stock" name="stock">
                 </div>
             </div>
             <br>
@@ -100,8 +101,8 @@
                     <button (click)="goToProductList()" class="btn btn-danger mx-2">Cancel</button>
                 </div>
             </div>
-
         </form>
     </div>
-    
+
+    <br><br><br><br>
 </div>

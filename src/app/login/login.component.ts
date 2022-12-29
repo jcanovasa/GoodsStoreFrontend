@@ -18,7 +18,7 @@ export class LoginComponent {
 
     } else {
       this.errors.push('Email or password incorrect');
-    }
+    } 
     
   }
 }

@@ -1,0 +1,46 @@
+<div class="container card card-header my-5" style="width: 65ch">
+    <div class="container" id="login">
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <h3 class="text-center">Create account</h3>
+                            <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label><b>Name</b></label>
+                                                <input type="text" class="form-control" id="name"
+                                                    [(ngModel)]="user.name" name="name" required placeholder="Your name"
+                                                    minlength="2" maxlength="15" #name="ngModel"><br>
+                                                <label><b>Email</b></label>
+                                                <input type="email" class="form-control" id="email"
+                                                    [(ngModel)]="user.email" name="email" required
+                                                    placeholder="Your email"><br>
+                                                <label><b>Enter password</b></label>
+                                                <input [(ngModel)]="user.pwd" for="password" type="password" class="form-control" id="password"
+                                                    name="password" required placeholder="At least 6 characters"
+                                                    minlength="6" maxlength="16"><br>
+                                                <label><b>Re-enter password</b></label>
+                                                <input for="passwordConfirmation" type="password" class="form-control"
+                                                    id="passwordConfirmation" [(ngModel)]="pwdConfirmation" name="password" required
+                                                    minlength="6" maxlength="16" #name="ngModel">
+                                            </div>
+                                        </div>
+                                    </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="submit" (click)="checkPwd()" class="btn btn-success">Register</button>
+                                        <button (click)="goToLogin()" class="btn btn-danger mx-2">Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

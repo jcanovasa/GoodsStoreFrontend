@@ -1,63 +1,47 @@
 <app-navbar></app-navbar>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <h3 class="text-center">Add user</h3>
-            <form (ngSubmit)="onSubmit()" #userForm = "ngForm">
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col">
-                            <label>Name</label>
-                            <input type="text" 
-                            class="form-control" 
-                            id="name" 
-                            [(ngModel)]="user.name" 
-                            name="name" 
-                            required 
-                            placeholder="Your name"
-                            minlength="2"
-                            maxlength="15"
-                            #name = "ngModel"><br>
-                            <label>Surame</label>
-                            <input type="text" 
-                            class="form-control" 
-                            id="surname" 
-                            [(ngModel)]="user.surname" 
-                            name="surname" 
-                            required 
-                            placeholder="Your surname"><br>
-                            <label>Email</label>
-                            <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email" required placeholder="Your email"><br>
-                            <label>Date birth</label>
-                            <input type="date" 
-                            class="form-control" 
-                            id="birth" 
-                            [(ngModel)]="user.birth" 
-                            name="birth" 
+    <h3 class="text-center">Adding new user</h3><br>
+    <div class="container card card-header" style="width: 500">
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label><b>Name</b></label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="user.name" name="name" required
+                            placeholder="Your name" minlength="2" maxlength="15" #name="ngModel"><br>
+                        <label><b>Surame</b></label>
+                        <input type="text" class="form-control" id="surname" [(ngModel)]="user.surname" name="surname"
+                            required placeholder="Your surname"><br>
+                        <label><b>Email</b></label>
+                        <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email"
+                            required placeholder="Your email"><br>
+                        <label><b>Date birth</b></label>
+                        <input type="date" class="form-control" id="birth" [(ngModel)]="user.birth" name="birth"
                             pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
-                            required 
-                            placeholder="Your birth date"><br>
-                            <label>Rol</label>
-                            <div class="form-check">
-                                <input class="form-check-input" [(ngModel)]="user.rol" type="radio" name="rol" value="User" checked>
-                                <label class="form-check-label" for="userRol">User</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" [(ngModel)]="user.rol" type="radio" name="rol" value="Admin">
-                                <label class="form-check-label" for="adminRol">Administrator</label>
-                            </div>
+                            required placeholder="Your birth date"><br>
+                        <label><b>Rol</b></label>
+                        <div class="form-check">
+                            <input class="form-check-input" [(ngModel)]="user.rol" type="radio" name="rol" value="User"
+                                checked>
+                            <label class="form-check-label" for="userRol">User</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" [(ngModel)]="user.rol" type="radio" name="rol"
+                                value="Admin">
+                            <label class="form-check-label" for="adminRol">Administrator</label>
                         </div>
                     </div>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <button class="btn btn-success" >Save</button>
-                        <button (click)="goToUserList()" class="btn btn-danger mx-2">Cancel</button>
-                    </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-success">Save</button>
+                    <button (click)="goToUserList()" class="btn btn-danger mx-2">Cancel</button>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
+    <br><br><br>
 </div>
